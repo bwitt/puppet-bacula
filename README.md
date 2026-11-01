@@ -21,6 +21,9 @@ As such, to get the benefits of using this module, you should be using it on at
 least the director and client, and most likely the storage, though this might
 be gotten around, if one were so inclined.
 
+On EL10, the Bacula packages are provided by [EPEL], which must be enabled
+before using this module.
+
 ## Usage
 
 To understand Bacula, the [Component Overview] in the Bacula documentation is a
@@ -240,3 +243,4 @@ the `bacula::director::fileset` to the same value.
 [FileSet resource]: http://www.bacula.org/7.0.x-manuals/en/main/Configuring_Director.html#SECTION001570000000000000000
 [exported resources]: https://docs.puppetlabs.com/puppet/latest/reference/lang_exported.html
 [PuppetDB]: https://docs.puppetlabs.com/puppetdb
+[EPEL]: https://docs.fedoraproject.org/en-US/epel/
