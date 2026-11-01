@@ -29,6 +29,8 @@ describe 'bacula::director' do
       expected_packages.each do |package|
         it { is_expected.to contain_package(package).with('ensure' => 'installed') }
       end
+
+      it { is_expected.to contain_postgresql__server__db('bacula').with_user('bacula').with_owner('bacula') }
     end
   end
 end

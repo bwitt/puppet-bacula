@@ -22,6 +22,7 @@ class bacula::director::postgresql (
     require postgresql::server
     postgresql::server::db { $db_name:
       user     => $db_user,
+      owner    => $db_user,
       password => postgresql::postgresql_password($db_user, $db_pw),
       encoding => 'SQL_ASCII',
       locale   => 'C',
