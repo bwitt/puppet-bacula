@@ -31,6 +31,7 @@ describe 'bacula::director' do
       end
 
       it { is_expected.to contain_postgresql__server__db('bacula').with_user('bacula').with_owner('bacula') }
+      it { is_expected.to contain_class('postgresql::server::contrib') }
     end
   end
 end

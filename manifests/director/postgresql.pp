@@ -20,6 +20,8 @@ class bacula::director::postgresql (
 
   if $bacula::director::manage_db {
     require postgresql::server
+    # pg_trgm, needed by the Bacula 15 schema
+    include postgresql::server::contrib
     postgresql::server::db { $db_name:
       user     => $db_user,
       owner    => $db_user,
